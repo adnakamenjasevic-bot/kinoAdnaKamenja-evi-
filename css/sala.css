@@ -1,1 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
 
+/* GORNJE INFORMACIJE */
+.info {
+    margin: 20px;
+}
+
+/* PLATNO */
+.screen {
+    background: #555;
+    color: white;
+    padding: 15px;
+    width: 60%;
+    margin: 20px auto;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* SALA */
+.cinema {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* RED */
+.row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* OZNAKA REDA */
+.label {
+    width: 20px;
+    font-weight: bold;
+}
+
+/* SJEDIŠTA */
+.seat {
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+}
+
+/* BOJE */
+.free {
+    background-color: green;
+}
+
+.taken {
+    background-color: red;
+}
+
+.reserved {
+    background-color: gray;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .seat {
+        width: 18px;
+        height: 18px;
+    }
+}
