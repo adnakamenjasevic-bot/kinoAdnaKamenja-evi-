@@ -11,85 +11,27 @@
 
 <header class="info">
     <h1>Kino sala</h1>
-    <p><strong>Film:</strong> Dune: Part Two</p>
-    <p><strong>Vrijeme projekcije:</strong> 20:00</p>
+    <p><strong>Film:</strong> <span id="film"></span></p>
+    <p><strong>Vrijeme projekcije:</strong> <span id="vrijeme"></span></p>
     <p><strong>Broj sale:</strong> 3</p>
 </header>
 
+<!-- PLATNO -->
 <div class="screen">PLATNO</div>
 
-<div class="cinema">
+<!-- OVDJE JS CRTA SALU -->
+<div id="sala" class="cinema"></div>
 
-    <!-- A -->
-    <div class="row">
-        <span class="label">A</span>
-        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
-        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
-        <div class="seat reserved"></div><div class="seat reserved"></div>
-    </div>
-
-    <!-- B -->
-    <div class="row">
-        <span class="label">B</span>
-        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
-        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
-        <div class="seat reserved"></div><div class="seat reserved"></div>
-    </div>
-
-    <!-- C -->
-    <div class="row">
-        <span class="label">C</span>
-        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
-        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
-        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
-    </div>
-
-    <!-- D -->
-    <div class="row">
-        <span class="label">D</span>
-        <div class="seat free"></div><div class="seat free"></div>
-        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
-        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
-    </div>
-
-    <!-- E -->
-    <div class="row">
-        <span class="label">E</span>
-        <div class="seat free"></div><div class="seat free"></div>
-        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
-        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
-    </div>
-
-    <!-- F -->
-    <div class="row">
-        <span class="label">F</span>
-        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
-        <div class="seat taken"></div><div class="seat taken"></div>
-        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
-    </div>
-
-    <!-- G -->
-    <div class="row">
-        <span class="label">G</span>
-        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
-        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
-        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
-    </div>
-
-    <!-- H -->
-    <div class="row">
-        <span class="label">H</span>
-        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
-        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
-        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
-    </div>
-    <div class="legend">
+<!-- LEGENDA -->
+<div class="legend">
     <div><div class="seat free"></div> Slobodno</div>
     <div><div class="seat taken"></div> Zauzeto</div>
     <div><div class="seat reserved"></div> Rezervisano</div>
 </div>
 
-</div>
+<!-- JAVASCRIPT -->
+<script src="../scripts/app.js"></script>
+<script src="../scripts/kinoSala.js"></script>
 
 </body>
 </html>
