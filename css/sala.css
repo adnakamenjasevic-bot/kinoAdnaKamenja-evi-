@@ -1,54 +1,72 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     text-align: center;
+    padding: 20px;
 }
 
-/* GORNJE INFORMACIJE */
+/* ===== HEADER (informacije) ===== */
 .info {
-    margin: 20px;
+    margin-bottom: 20px;
 }
 
-/* PLATNO */
+.info h1 {
+    margin-bottom: 10px;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+/* ===== PLATNO ===== */
 .screen {
-    background: #555;
+    background-color: #555;
     color: white;
     padding: 15px;
-    width: 60%;
     margin: 20px auto;
+    width: 60%;
     font-weight: bold;
     border-radius: 5px;
 }
 
-/* SALA */
+/* ===== KINO SALA ===== */
 .cinema {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
 }
 
 /* RED */
 .row {
     display: flex;
     align-items: center;
-    gap: 8px;
+    margin: 5px 0;
 }
 
-/* OZNAKA REDA */
+/* OZNAKA REDA (A, B, C...) */
 .label {
     width: 20px;
+    margin-right: 10px;
     font-weight: bold;
 }
 
-/* SJEDIŠTA */
+/* SJEDIŠTE */
 .seat {
     width: 25px;
     height: 25px;
-    border-radius: 3px;
+    margin: 3px;
+    border-radius: 4px;
 }
 
-/* BOJE */
+/* BOJE SJEDIŠTA */
 .free {
     background-color: green;
 }
@@ -61,10 +79,28 @@ body {
     background-color: gray;
 }
 
-/* RESPONSIVE */
+/* ===== LEGENDA (nije obavezno ali je PLUS) ===== */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.legend div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
     .seat {
         width: 18px;
         height: 18px;
+    }
+
+    .screen {
+        width: 90%;
     }
 }
