@@ -3,18 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kino Sala</title>
+    <title>Kino sala</title>
     <link rel="stylesheet" href="../css/sala.css">
 </head>
 
 <body>
 
-<!-- KONTEJNER ZA SALU -->
-<div id="sala"></div>
+<header class="info">
+    <h1>Kino sala</h1>
+    <p><strong>Film:</strong> Dune: Part Two</p>
+    <p><strong>Vrijeme projekcije:</strong> 20:00</p>
+    <p><strong>Broj sale:</strong> 3</p>
+</header>
 
-<!-- JAVASCRIPT -->
-<script src="../scripts/app.js"></script>
-<script src="../scripts/kinoSala.js"></script>
+<div class="screen">PLATNO</div>
+
+<div class="cinema">
+
+    <!-- A -->
+    <div class="row">
+        <span class="label">A</span>
+        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
+        <div class="seat reserved"></div><div class="seat reserved"></div>
+    </div>
+
+    <!-- B -->
+    <div class="row">
+        <span class="label">B</span>
+        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
+        <div class="seat reserved"></div><div class="seat reserved"></div>
+    </div>
+
+    <!-- C -->
+    <div class="row">
+        <span class="label">C</span>
+        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
+        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
+    </div>
+
+    <!-- D -->
+    <div class="row">
+        <span class="label">D</span>
+        <div class="seat free"></div><div class="seat free"></div>
+        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
+        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
+    </div>
+
+    <!-- E -->
+    <div class="row">
+        <span class="label">E</span>
+        <div class="seat free"></div><div class="seat free"></div>
+        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
+        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
+    </div>
+
+    <!-- F -->
+    <div class="row">
+        <span class="label">F</span>
+        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+        <div class="seat taken"></div><div class="seat taken"></div>
+        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
+    </div>
+
+    <!-- G -->
+    <div class="row">
+        <span class="label">G</span>
+        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
+        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
+    </div>
+
+    <!-- H -->
+    <div class="row">
+        <span class="label">H</span>
+        <div class="seat free"></div><div class="seat free"></div><div class="seat free"></div><div class="seat free"></div>
+        <div class="seat taken"></div><div class="seat taken"></div><div class="seat taken"></div>
+        <div class="seat reserved"></div><div class="seat reserved"></div><div class="seat reserved"></div>
+    </div>
+
+</div>
 
 </body>
 </html>
