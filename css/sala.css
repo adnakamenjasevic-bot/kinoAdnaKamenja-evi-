@@ -104,3 +104,80 @@ body {
         width: 90%;
     }
 }
+/* ===== ULJEPŠAVANJE ===== */
+
+/* kartica (container efekat) */
+body {
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+}
+
+/* info box */
+.info {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* platno jače */
+.screen {
+    background: linear-gradient(to right, #444, #777);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* redovi malo razmaknuti */
+.row {
+    margin: 8px 0;
+}
+
+/* sjedista - efekat */
+.seat {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* hover efekat */
+.seat:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* razmak između lijeve i desne strane (kao kino prolaz) */
+.row .seat:nth-child(6) {
+    margin-right: 15px;
+}
+
+/* malo modernije boje */
+.free {
+    background-color: #2ecc71;
+}
+
+.taken {
+    background-color: #e74c3c;
+}
+
+.reserved {
+    background-color: #7f8c8d;
+}
+
+/* legenda stil */
+.legend {
+    margin-top: 30px;
+}
+
+.legend div {
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* mali kvadrati u legendi */
+.legend .seat {
+    width: 15px;
+    height: 15px;
+}
