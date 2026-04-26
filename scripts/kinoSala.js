@@ -1,36 +1,71 @@
-const podaci = {
-    projekcije: [
-        {
-            film: "Avatar 2",
-            vrijeme: "18:00",
-            sjedista: generisiSjedista()
-        },
-        {
-            film: "Dune 2",
-            vrijeme: "20:00",
-            sjedista: generisiSjedista()
-        }
-    ]
-};
+function prikazi() {
+    const sala = document.getElementById("sala");
+    sala.innerHTML = "";
 
-function generisiSjedista() {
-    const redovi = ["A","B","C","D","E","F","G","H"];
-    let sjedista = [];
+    const p = podaci.projekcije[trenutna];
 
-    redovi.forEach(red => {
-        for (let i = 1; i <= 10; i++) {
-            sjedista.push({
-                red: red,
-                broj: i,
-                status: randomStatus()
-            });
-        }
+    // update header
+    document.getElementById("film").innerText = p.film;
+    document.getElementById("vrijeme").innerText = p.vrijeme;
+
+    const redovi = {};
+
+    p.sjedista.forEach(s => {
+        if (!redovi[s.red]) redovi[s.red] = [];
+        redovi[s.red].push(s);
     });
 
-    return sjedista;
+    for (let r in redovi) {
+        const row = document.createElement("div");
+        row.className = "row";
+
+        const label = document.createElement("span");
+        label.className = "label";
+        label.innerText = r;
+        row.appendChild(label);
+
+        redovi[r].forEach(s => {
+            const seat = document.createElement("div");
+            seat.className = "seat";
+
+            if (s.status === "slobodno") seat.classList.add("free");
+            if (s.status === "zauzeto") seat.classList.add("taken");
+            if (s.status === "rezervisano") seat.classList.add("reserved");
+
+            seat.onclick = () => {
+                if (s.status === "slobodno") {
+                    s.status = "rezervisano";
+                    prikazi();
+                }
+            };
+
+            row.appendChild(seat);
+        });
+
+        sala.appendChild(row);
+    }
+
+    // dugmad
+    const prev = document.createElement("button");
+    prev.innerText = "Prethodna";
+    prev.onclick = () => {
+        if (trenutna > 0) {
+            trenutna--;
+            prikazi();
+        }
+    };
+
+    const next = document.createElement("button");
+    next.innerText = "Sljedeća";
+    next.onclick = () => {
+        if (trenutna < podaci.projekcije.length - 1) {
+            trenutna++;
+            prikazi();
+        }
+    };
+
+    sala.appendChild(prev);
+    sala.appendChild(next);
 }
 
-function randomStatus() {
-    const statusi = ["slobodno", "zauzeto", "rezervisano"];
-    return statusi[Math.floor(Math.random() * statusi.length)];
-}
+prikazi();
