@@ -1,36 +1,38 @@
 const podaci = {
     projekcije: [
         {
-            film: "Avatar 2",
-            vrijeme: "18:00",
-            sjedista: generisiSjedista()
+            film: "Dune: Part Two",
+            vrijeme: "20:00",
+            sjedista: generisi()
         },
         {
-            film: "Dune 2",
-            vrijeme: "20:00",
-            sjedista: generisiSjedista()
+            film: "Avatar 2",
+            vrijeme: "18:00",
+            sjedista: generisi()
         }
     ]
 };
 
-function generisiSjedista() {
-    const redovi = ["A","B","C","D","E","F","G","H"];
-    let sjedista = [];
+let trenutna = 0;
 
-    redovi.forEach(red => {
+function generisi() {
+    const redovi = ["A","B","C","D","E","F","G","H"];
+    let lista = [];
+
+    redovi.forEach(r => {
         for (let i = 1; i <= 10; i++) {
-            sjedista.push({
-                red: red,
+            lista.push({
+                red: r,
                 broj: i,
-                status: randomStatus()
+                status: random()
             });
         }
     });
 
-    return sjedista;
+    return lista;
 }
 
-function randomStatus() {
-    const statusi = ["slobodno", "zauzeto", "rezervisano"];
-    return statusi[Math.floor(Math.random() * statusi.length)];
+function random() {
+    const s = ["slobodno","zauzeto","rezervisano"];
+    return s[Math.floor(Math.random() * 3)];
 }
